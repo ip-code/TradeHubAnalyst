@@ -1,0 +1,992 @@
+11341|100mm Rolled Tungsten Compact Plates
+11293|100mm Steel Plates I
+20345|100mm Steel Plates II
+35657|100MN YS8 Compact Afterburner
+6005|10MN Monopropellant Enduring Afterburner
+35656|10MN YS8 Compact Afterburner
+10690|125mm Carbide Railgun I
+8785|125mm Light Carbine Repeating Cannon I
+8789|125mm Light Prototype Automatic Cannon
+10694|125mm Prototype Gauss Gun
+10680|125mm Railgun II
+10688|125mm 'Scout' Accelerator Cannon
+7293|150mm Compressed Coil Gun I
+2881|150mm Light AutoCannon II
+8817|150mm Light Carbine Repeating Cannon I
+7287|150mm Prototype Gauss Gun
+565|150mm Railgun I
+3074|150mm Railgun II
+7289|150mm 'Scout' Accelerator Cannon
+6001|1MN YS8 Compact Afterburner
+2889|200mm AutoCannon II
+11351|200mm Crystalline Carbonide Restrained Plates
+8867|200mm Light Gallium Machine Gun
+8869|200mm Light Prototype Automatic Cannon
+8863|200mm Light 'Scout' Autocannon I
+14278|200mm Prototype Gauss Gun
+11349|200mm Rolled Tungsten Compact Plates
+11295|200mm Steel Plates I
+9133|220mm Medium Prototype Automatic Cannon
+7371|250mm Carbide Railgun I
+8905|250mm Light Carbine Howitzer I
+8907|250mm Light Gallium Cannon
+7367|250mm Prototype Gauss Gun
+9415|280mm Gallium Cannon
+488|280mm Howitzer Artillery I
+2977|280mm Howitzer Artillery II
+9411|280mm 'Scout' Artillery I
+11311|400mm Crystalline Carbonide Restrained Plates
+11309|400mm Rolled Tungsten Compact Plates
+20349|400mm Steel Plates II
+5871|41F Veiled Targeting Unit
+9137|425mm Medium Carbine Repeating Cannon I
+5945|500MN ColdGas Enduring Microwarpdrive
+35662|500MN Quad LiF Restrained Microwarpdrive
+35661|500MN YT8 Compact Microwarpdrive
+5975|50MN ColdGas Enduring Microwarpdrive
+35660|50MN Quad LiF Restrained Microwarpdrive
+5971|5MN ColdGas Enduring Microwarpdrive
+35658|5MN Quad LiF Restrained Microwarpdrive
+5973|5MN YT8 Compact Microwarpdrive
+2969|720mm Howitzer Artillery II
+9451|720mm 'Scout' Artillery I
+3098|75mm Gatling Rail II
+7247|75mm Prototype Gauss Gun
+37545|A211 Enduring Guidance Disruptor
+34201|Accelerant Decryptor
+2203|Acolyte I
+2205|Acolyte II
+23727|Acolyte TD300
+3388|Advanced Industry
+5342|Alfven Enduring Remote Tracking Computer
+25595|Alloyed Tritanium Bar
+6159|AlumelWired Enduring Sensor Booster
+24592|Amarr Empire Starbase Charter
+28694|Amber Mykoserocin
+41031|AML Compact Omnidirectional Tracking Link
+41264|Ample Compounds
+17190|Angel Bronze Tag
+12304|Angel Copper Tag
+17192|Angel Diamond Tag
+17196|Angel Platinum Tag
+21730|Angel Standard Trigger Mechanism
+7493|Anode Light Electron Particle Cannon I
+7541|Anode Light Ion Particle Cannon I
+7585|Anode Light Neutron Particle Cannon I
+43|Antibiotics
+34575|Antikythera Element
+238|Antimatter Charge L
+230|Antimatter Charge M
+222|Antimatter Charge S
+17648|Antimatter Charge XL
+11549|Antimatter Reactor Unit
+2268|Aqueous Liquids
+8089|Arbalest Compact Light Missile Launcher
+8105|'Arbalest' Heavy Missile Launcher
+16527|'Arbalest' Rocket Launcher I
+19994|Arch Angel Carbonized Lead M
+25605|Armor Plates
+25616|Artificial Neural Network
+34203|Augmentation Decryptor
+12822|Aurora M
+2305|Autotrophs
+17455|Azure Plagioclase
+2393|Bacteria
+5319|Baker Nunn Enduring Tracking Disruptor I
+12274|Ballistic Control System I
+22291|Ballistic Control System II
+5320|Balmer Series Compact Tracking Disruptor I
+33572|Barium Firework
+32994|Barium Firework CXIV
+12775|Barrage L
+12773|Barrage M
+12625|Barrage S
+2267|Base Metals
+521|'Basic' Damage Control
+1419|'Basic' Shield Power Relay
+2329|Biocells
+2396|Biofuels
+3779|Biomass
+17204|Blood Brass Tag
+23148|Blood Raider Limited Ballistic Control
+23151|Blood Raider Weapon Integration Unit
+12533|Blood Silver Tag
+3707|Blue Pill
+25596|Broken Drone Transceiver
+25600|Burned Logic Circuit
+3330|Caldari Frigate
+21740|Caldari Navy Antimatter Charge L
+15600|Caldari Navy Captain Insignia II
+15601|Caldari Navy Captain Insignia III
+15602|Caldari Navy Commodore Insignia I
+15656|Caldari Navy Commodore Insignia II
+27371|Caldari Navy Inferno Light Missile
+27351|Caldari Navy Inferno Torpedo
+15596|Caldari Navy Midshipman Insignia I
+27435|Caldari Navy Mjolnir Heavy Missile
+27387|Caldari Navy Mjolnir Light Missile
+27321|Caldari Navy Mjolnir Rocket
+27339|Caldari Navy Mjolnir Torpedo
+27401|Caldari Navy Nova Heavy Assault Missile
+27395|Caldari Navy Scourge Cruise Missile
+27441|Caldari Navy Scourge Heavy Missile
+27345|Caldari Navy Scourge Torpedo
+23031|Caldari Navy Thorium Charge M
+23051|Caldari Navy Tungsten Charge L
+24593|Caldari State Starbase Charter
+1447|Capacitor Power Relay II
+11283|Cap Booster 150
+11285|Cap Booster 200
+263|Cap Booster 25
+264|Cap Booster 50
+2032|Cap Recharger II
+41579|Capsule Upwell SKIN Permanent
+9826|Carbon
+186|Carbonized Lead M
+178|Carbonized Lead S
+16659|Carbon Polymers
+30024|Cartesian Temporal Coordinator
+19075|Centii AType Small Remote Capacitor Transmitter
+30270|Central System Controller
+16660|Ceramic Powder
+37877|Cerebrum In A Container
+5365|Cetus Scoped Burst Jammer
+2401|Chiral Structures
+16641|Chromium
+5321|CIR Compact Guidance Disruptor
+23791|'Citadella' 100mm Steel Plates
+21853|Civilian Armor Repairer
+21855|Civilian Expanded Cargohold
+30328|Civilian Stasis Webifier
+5281|Coadjunct Scoped Remote Sensor Booster
+16640|Cobalt
+16309|'Collateral' Adaptive Nano Plating I
+41268|Compact Conductors
+2287|Complex Organisms
+17470|Concentrated Veldspar
+16118|CONCORD Officer Emblem
+16119|CONCORD Soldier Emblem
+17463|Condensed Scordite
+25604|Conductive Polymer
+25623|Conductive Thermoplastic
+12814|Conflagration M
+3828|Construction Blocks
+9836|Consumer Electronics
+25591|Contaminated Lorentz Fluid
+25590|Contaminated Nanite Compound
+9832|Coolant
+33573|Copper Firework
+3887|CoProcessor I
+18795|Coreli AType EM Plating
+18805|Corelum CType Energized EM Membrane
+17938|Core Probe Launcher I
+33577|Covert Research Tools
+3824|Crystal Egg
+16670|Crystalline Carbonide
+16655|Crystallite Alloy
+25611|Current Pump
+2046|Damage Control I
+2048|Damage Control II
+25597|Damaged Artificial Neural Network
+20421|Datacore  Amarrian Starship Engineering
+25887|Datacore  Caldari Starship Engineering
+20417|Datacore  Electromagnetic Physics
+20418|Datacore  Electronic Engineering
+20115|Datacore  Engineering Subsystems Engineering
+20410|Datacore  Gallentean Starship Engineering
+20419|Datacore  Graviton Physics
+20411|Datacore  High Energy Physics
+20171|Datacore  Hydromagnetic Physics
+20413|Datacore  Laser Physics
+20424|Datacore  Mechanical Engineering
+20172|Datacore  Minmatar Starship Engineering
+20415|Datacore  Molecular Engineering
+20416|Datacore  Nanite Engineering
+20423|Datacore  Nuclear Physics
+20412|Datacore  Plasma Physics
+20114|Datacore  Propulsion Subsystems Engineering
+20414|Datacore  Quantum Physics
+20420|Datacore  Rocket Science
+3812|Data Sheets
+5322|DDO Scoped Tracking Disruptor I
+25592|Defective Current Pump
+30269|Defensive Control Node
+5361|Deluge Enduring Burst Jammer
+41032|Denny Enduring Omnidirectional Tracking Link
+17471|Dense Veldspar
+197|Depleted Uranium L
+18635|Discovery Survey Probe I
+17220|Domination Brass Tag
+13997|Domination Kinetic Deflection Field
+13995|Domination Thermal Dissipation Field
+28362|Drone Capillary Fluid
+28363|Drone Cerebral Fragment
+28366|Drone Coronary Unit
+28365|Drone Epidermal Shielding Chunk
+24427|Drone Link Augmentor II
+28361|Drone Synaptic Relay Wiring
+3709|Drop
+7327|Dual 150mm Prototype Gauss Gun
+9093|Dual 180mm Prototype Automatic Cannon
+6637|Dual Anode Light Particle Stream I
+13225|Eifyr and Co 'Gunslinger' Small Projectile Turret SP603
+2390|Electrolytes
+11551|Electrolytic Capacitor Unit
+30254|Electromechanical Hull Sheeting
+3687|Electronic Parts
+17624|Elena Gazky's DNA
+21815|Elite Drone AI
+201|EMP L
+193|EMP M
+185|EMP S
+17668|EMP XL
+2553|EM Ward Amplifier II
+41302|Enduring Compounds
+11269|Energized Adaptive Nano Membrane II
+19939|Enfeebling Scoped Ladar ECM
+44|Enriched Uranium
+5239|EPS Gaussian Scoped Mining Laser
+16635|Evaporite Deposits
+17765|Exotic Dancers Female
+4358|Exotic Dancers Male
+1317|Expanded Cargohold I
+16365|Experimental Armor Explosive Hardener I
+16381|Experimental Armor Thermal Hardener I
+16317|Experimental Kinetic Plating I
+8007|Experimental SV2000 Rapid Light Missile Launcher
+2531|Explosive Deflection Amplifier II
+1266|Explosive Plating II
+6176|F12 Enduring Tracking Computer
+5279|F23 Compact Remote Sensor Booster
+5339|F293 Scoped Remote Tracking Computer
+6296|F89 Compact Signal Amplifier
+6160|F90 Compact Sensor Booster
+5443|Faint Epsilon Scoped Warp Scrambler
+5403|Faint Scoped Warp Disruptor
+22993|Federation Navy Antimatter Charge L
+22977|Federation Navy Antimatter Charge M
+15592|Federation Navy Fleet Captain Insignia I
+15593|Federation Navy Fleet Major Insignia I
+31882|Federation Navy Hammerhead
+22971|Federation Navy Iridium Charge S
+15588|Federation Navy Midshipman Insignia II
+15590|Federation Navy Sergeant Insignia I
+16002|Federation Navy Sergeant Insignia III
+15591|Federation Navy Sergeant Major Insignia I
+2307|Felsic Magma
+17317|Fermionic Condensates
+16673|Fernite Carbide
+16683|Ferrogel
+19660|Festival Launcher
+17453|Fiery Kernite
+4027|Fleeting Compact Stasis Webifier
+6811|Focused Anode Pulse Particle Stream I
+6805|Focused Modal Pulse Laser I
+6863|Focused Modulated Medium Energy Beam I
+18029|Freed Slaves
+25601|Fried Interface Circuit
+16679|Fullerides
+30376|FulleriteC32
+30377|FulleriteC320
+30378|FulleriteC540
+30371|FulleriteC60
+30372|FulleriteC70
+30373|FulleriteC72
+30374|FulleriteC84
+30018|Fused Nanomechanical Engines
+19942|FZ3a Enduring Gravimetric ECM
+24594|Gallente Federation Starbase Charter
+21841|Gallente Mining Laser
+5181|Gatling Anode Particle Stream I
+450|Gatling Pulse Laser I
+2348|GelMatrix Biopaste
+17868|Golden Omber
+11534|Gravimetric Sensor Cluster
+33000|Gravimetric Sensor Compensation
+11693|Graviton Pulse Generator
+9834|Guidance Systems
+21368|Guristas Antimatter Charge XL
+17205|Guristas Copper Tag
+12546|Guristas Crystal Tag
+21728|Guristas Graviton Hardening
+21727|Guristas Gravity Focuser
+21726|Guristas Light Weapon Console
+29620|Guristas Scourge XL Torpedo
+12543|Guristas Silver Tag
+520|Gyrostabilizer I
+519|Gyrostabilizer II
+12779|Hail L
+16303|'Halcyon' Core Equalizer I
+2183|Hammerhead I
+2185|Hammerhead II
+2364|Heat Sink II
+6965|Heavy Anode Particle Stream I
+6925|Heavy Anode Pulse Particle Stream I
+25715|Heavy Assault Missile Launcher II
+265|Heavy Defender Missile I
+16497|Heavy Ghoul Compact Energy Nosferatu
+16499|Heavy Knave Scoped Energy Nosferatu
+2272|Heavy Metals
+6959|Heavy Modal Laser I
+6923|Heavy Modulated Pulse Energy Beam I
+16272|Heavy Water
+4247|Helium Fuel Block
+16274|Helium Isotopes
+1231|Hemorphite
+30022|Heuristic Selfassemblers
+16665|Hexite
+37544|Highstroke Scoped Guidance Disruptor
+17893|HighTech Data Chip
+17894|HighTech Scanner
+17897|HighTech Small Arms
+17898|HighTech Transmitters
+2454|Hobgoblin I
+2456|Hobgoblin II
+23707|Hornet EC300
+2464|Hornet I
+2466|Hornet II
+16633|Hydrocarbons
+3685|Hydrogen Batteries
+4246|Hydrogen Fuel Block
+17889|Hydrogen Isotopes
+16682|Hypersynaptic Fibers
+19927|Hypnos Scoped Magnetometric ECM
+25565|'Hypnos' Signal Distortion Amplifier I
+28578|Ice Harvester Upgrade II
+5839|IFFA Compact Damage Control
+15612|Imperial Navy Captain Insignia I
+15614|Imperial Navy Colonel Insignia I
+15613|Imperial Navy Major Insignia I
+15608|Imperial Navy Midshipman Insignia II
+23071|Imperial Navy Multifrequency S
+15610|Imperial Navy Sergeant Insignia I
+15992|Imperial Navy Sergeant Insignia II
+16000|Imperial Navy Sergeant Insignia III
+23111|Imperial Navy Ultraviolet L
+25621|Impetus Console
+5865|Indirect Target Acquisition I
+2397|Industrial Fibers
+1403|Inertial Stabilizers I
+1816|Inferno AutoTargeting Light Missile I
+204|Inferno Cruise Missile
+24511|Inferno Fury Heavy Missile
+20308|Inferno Heavy Assault Missile
+208|Inferno Heavy Missile
+24494|Inferno Javelin Heavy Assault Missile
+211|Inferno Light Missile
+24515|Inferno Precision Heavy Missile
+24486|Inferno Rage Heavy Assault Missile
+2811|Inferno Rage Torpedo
+2514|Inferno Rocket
+2510|Inferno Torpedo
+2173|Infiltrator I
+2175|Infiltrator II
+241|Infrared S
+13223|Inherent Implants 'Lancer' Small Energy Turret SE603
+13258|Inherent Implants 'Noble' Repair Systems RS603
+5405|Initiated Compact Warp Disruptor
+5445|Initiated Compact Warp Scrambler
+25608|Intact Shield Emitter
+28262|'Integrated' Acolyte
+25620|Interface Circuit
+2309|Ionic Solutions
+223|Iron Charge M
+37|Isogen
+5439|J5b Enduring Warp Scrambler
+5399|J5 Enduring Warp Disruptor
+1226|Jaspet
+12803|Javelin L
+12801|Javelin M
+12620|Javelin S
+30268|Jump Drive Control Nexus
+34419|Jump Fatigue Recovery Agent
+5301|Kapteyn Compact Sensor Dampener
+20|Kernite
+2547|Kinetic Deflection Amplifier II
+14292|Kruul's DNA
+1958|Ladar ECM I
+26076|Large AntiEM Screen Reinforcer I
+16481|Large Asymmetric Remote Capacitor Transmitter
+16483|Large Murky Remote Capacitor Transmitter
+226|Lead Charge M
+218|Lead Charge S
+5299|LFT Enduring Sensor Dampener
+499|Light Missile Launcher I
+2404|Light Missile Launcher II
+564|Light Neutron Blaster I
+3178|Light Neutron Blaster II
+23719|Light Shield Maintenance Bot I
+9632|Limited Adaptive Invulnerability Field I
+9622|Limited 'Anointed' EM Ward Field
+16355|Limited Armor EM Hardener I
+16363|Limited Armor Explosive Hardener I
+13287|Limited Cybernetic Subprocessor
+9646|Limited Explosive Deflection Field I
+7489|Limited Light Electron Blaster I
+7537|Limited Light Ion Blaster I
+7581|Limited Light Neutron Blaster I
+25711|Limited 'Limos' Heavy Assault Missile Launcher I
+13284|Limited Memory Augmentation
+13285|Limited Neural Boost
+9660|Limited Thermal Dissipation Field I
+5282|Linked Enduring Remote Sensor Booster
+16273|Liquid Ozone
+3725|Livestock
+25619|Logic Circuit
+25610|Lorentz Fluid
+17452|Luminous Kernite
+6485|M51 Benefactor Compact Shield Recharger
+10190|Magnetic Field Stabilizer II
+23167|Mainframe Bit
+30586|Malfunctioning Power Cores
+25589|Malfunctioning Shield Emitter
+30632|Malfunctioning Weapon Subroutines
+8101|'Malkuth' Heavy Missile Launcher I
+16521|'Malkuth' Rocket Launcher I
+3810|Marines
+5649|Mark I Compact Reinforced Bulkheads
+17464|Massive Scordite
+37880|Max Amarria
+37885|Meat Popsicle
+3689|Mechanical Parts
+21593|Mechanic Parts
+33101|Medium Ancillary Armor Repairer
+32772|Medium Ancillary Shield Booster
+23709|Medium Armor Maintenance Bot I
+8583|Medium Asymmetric Enduring Remote Shield Booster
+16489|Medium Asymmetric Remote Capacitor Transmitter
+8433|Medium Azeotropic Restrained Shield Extender
+4831|Medium Brief Capacitor Overcharge I
+2024|Medium Capacitor Booster II
+6073|Medium Compact PbAcid Cap Battery
+8517|Medium FS9 Regolith Compact Shield Extender
+16467|Medium Gremlin Compact Energy Neutralizer
+33704|Medium Hull Maintenance Bot I
+4569|Medium Ia Polarized Armor Regenerator
+5683|Medium Inefficient Hull Repair Unit
+16507|Medium Knave Scoped Energy Nosferatu
+8579|Medium Murky Compact Remote Shield Booster
+16491|Medium Murky Remote Capacitor Transmitter
+16493|Medium Partial E95b Remote Capacitor Transmitter
+31179|Medium Polycarbon Engine Housing I
+4395|Medium Processor Overclocking Unit I
+8585|Medium S95a Scoped Remote Shield Booster
+10850|Medium Shield Booster II
+3829|Medium Shield Extender I
+3831|Medium Shield Extender II
+23717|Medium Shield Maintenance Bot I
+16447|Medium Solace Scoped Remote Armor Repairer
+40|Megacyte
+25603|Melted Capacitor Console
+37817|Men's 'Curate' Coat festive
+4239|Men's 'Esquire' Coat silver
+34393|Men's 'Outlaw' Jacket Burnt Orange
+15331|Metal Scraps
+36|Mexallon
+25618|Micro Circuit
+2073|Microorganisms
+256|Microwave L
+248|Microwave M
+483|Miner I
+9842|Miniature Electronics
+10246|Mining Drone I
+10250|Mining Drone II
+22542|Mining Laser Upgrade I
+17815|Minmatar UUA Nexus Chip
+35790|Missile Guidance Computer II
+269|Mjolnir AutoTargeting Light Missile I
+202|Mjolnir Cruise Missile
+24535|Mjolnir Fury Cruise Missile
+24509|Mjolnir Fury Heavy Missile
+2613|Mjolnir Fury Light Missile
+20306|Mjolnir Heavy Assault Missile
+207|Mjolnir Heavy Missile
+212|Mjolnir Light Missile
+24539|Mjolnir Precision Cruise Missile
+24517|Mjolnir Precision Heavy Missile
+24505|Mjolnir Precision Light Missile
+24490|Mjolnir Rage Heavy Assault Missile
+2506|Mjolnir Torpedo
+6569|ML3 Scoped Survey Scanner
+7619|Modal Electron Particle Accelerator I
+7663|Modal Ion Particle Accelerator I
+7535|Modal Light Ion Particle Accelerator I
+7579|Modal Light Neutron Particle Accelerator I
+7703|Modal Neutron Particle Accelerator I
+30021|Modified Fluid Router
+11399|Morphite
+262|Multifrequency L
+254|Multifrequency M
+246|Multifrequency S
+25609|Nanite Compound
+28668|Nanite Repair Paste
+2463|Nanites
+2603|Nanofiber Internal Structure I
+2605|Nanofiber Internal Structure II
+11538|Nanomechanical Microprocessor
+16681|Nanotransistors
+33330|Navy Cap Booster 25
+30251|Neurovisual Input Matrix
+4051|Nitrogen Fuel Block
+17888|Nitrogen Isotopes
+41033|NJM Compact Omnidirectional Tracking Enhancer
+2310|Noble Gas
+2270|Noble Metals
+38|Nocxium
+2306|NonCS Crystals
+1822|Nova AutoTargeting Heavy Missile I
+1814|Nova AutoTargeting Light Missile I
+205|Nova Cruise Missile
+24531|Nova Fury Cruise Missile
+24507|Nova Fury Heavy Missile
+21867|Nova Heavy Assault Missile
+206|Nova Heavy Missile
+13856|Nova Javelin Heavy Assault Missile
+213|Nova Light Missile
+2655|Nova Precision Heavy Missile
+24488|Nova Rage Heavy Assault Missile
+24473|Nova Rage Rocket
+2516|Nova Rocket
+2508|Nova Torpedo
+195|Nuclear L
+11692|Nuclear Pulse Generator
+179|Nuclear S
+12787|Null L
+12785|Null M
+1227|Omber
+33822|Omnidirectional Tracking Enhancer I
+24438|Omnidirectional Tracking Link II
+6173|Optical Compact Tracking Computer
+29005|Optimal Range Disruption Script
+28999|Optimal Range Script
+11553|Oscillator Capacitor Unit
+1244|Overdrive Injector System I
+2317|Oxides
+2392|Oxidizing Compound
+3683|Oxygen
+4312|Oxygen Fuel Block
+17887|Oxygen Isotopes
+19812|Parallel Enduring Target Painter
+34204|Parity Decryptor
+5245|Particle Bore Compact Mining Laser
+5867|Passive Targeting Array I
+19810|Peripheral Compact Target Painter
+5302|Phased Muon Scoped Sensor Dampener
+16680|Phenolic Composites
+33359|Photonic Metamaterials
+11541|Photon Microprocessor
+2286|Planktic Colonies
+11530|Plasma Thruster
+2389|Plasmoids
+33361|Plasmonic Metamaterials
+3727|Plutonium
+237|Plutonium Charge L
+229|Plutonium Charge M
+221|Plutonium Charge S
+3695|Polytextiles
+30019|Powdered C540 Graphite
+25617|Power Circuit
+2399|Precious Metals
+17449|Pristine Jaspet
+34205|Process Decryptor
+2395|Proteins
+25707|Prototype 'Arbalest' Heavy Assault Missile Launcher I
+8027|Prototype 'Arbalest' Rapid Light Missile Launcher
+16359|Prototype Armor EM Hardener I
+16367|Prototype Armor Explosive Hardener I
+16375|Prototype Armor Kinetic Hardener I
+16383|Prototype Armor Thermal Hardener I
+16391|Prototype Energized Adaptive Nano Membrane I
+16407|Prototype Energized Explosive Membrane I
+16431|Prototype Energized Thermal Membrane I
+5340|PS Compact Remote Tracking Computer
+11556|Pulse Shield Emitter
+25335|Pure Improved Crash Booster
+17448|Pure Jaspet
+35|Pyerite
+1224|Pyroxeres
+3699|Quafe
+12767|Quake M
+12631|Quake S
+11540|Quantum Microprocessor
+2575|Radar ECM II
+11537|Radar Sensor Cluster
+17445|Radiant Hemorphite
+1877|Rapid Light Missile Launcher II
+5363|Rash Compact Burst Jammer
+4403|Reactive Armor Hardener
+2311|Reactive Gas
+2398|Reactive Metals
+7623|Regulated Electron Phase Cannon I
+7491|Regulated Light Electron Phase Cannon I
+7583|Regulated Light Neutron Phase Cannon I
+7707|Regulated Neutron Phase Cannon I
+1335|Reinforced Bulkheads II
+22177|Relic Analyzer I
+13279|Remote Sensing
+2104|Remote Tracking Computer II
+15630|Republic Fleet Captain Insignia I
+21896|Republic Fleet EMP M
+21898|Republic Fleet EMP S
+15631|Republic Fleet High Captain Insignia I
+30258|Resonance Calibration Matrix
+17456|Rich Plagioclase
+9848|Robotics
+9830|Rocket Fuel
+10631|Rocket Launcher II
+16657|Rolled Tungsten Alloy
+32787|Salvage Drone I
+25861|Salvager I
+37878|Sansha Claws Fairytale Book
+12551|Sansha Crystal Tag
+12548|Sansha Silver Tag
+33176|Scan Acquisition Array I
+33199|Scan Pinpointing Array II
+33180|Scan Rangefinding Array I
+29011|Scan Resolution Script
+25588|Scorched Telemetry Processor
+12563|Scorch S
+1228|Scordite
+1826|Scourge AutoTargeting Cruise Missile I
+1818|Scourge AutoTargeting Heavy Missile I
+203|Scourge Cruise Missile
+24533|Scourge Fury Cruise Missile
+2629|Scourge Fury Heavy Missile
+24495|Scourge Fury Light Missile
+20307|Scourge Heavy Assault Missile
+209|Scourge Heavy Missile
+24477|Scourge Javelin Rocket
+24529|Scourge Javelin Torpedo
+210|Scourge Light Missile
+24513|Scourge Precision Heavy Missile
+2679|Scourge Rage Heavy Assault Missile
+24471|Scourge Rage Rocket
+24521|Scourge Rage Torpedo
+266|Scourge Rocket
+267|Scourge Torpedo
+1952|Sensor Booster II
+12537|Serpentis Bronze Tag
+17215|Serpentis Copper Tag
+12541|Serpentis Crystal Tag
+12538|Serpentis Silver Tag
+14049|Shadow Serpentis Adaptive Nano Plating
+17270|Shadow Serpentis Gold Tag
+17272|Shadow Serpentis Silver Tag
+24443|Shield Boost Amplifier II
+3419|Shield Management
+2331|Shield Power Relay I
+394|Shield Recharger II
+33059|Shuttle Piloting For Dummies
+1987|Signal Amplifier II
+16636|Silicates
+9828|Silicon
+17867|Silvery Omber
+30488|Sisters Core Scanner Probe
+34432|Sisters Of EVE Charity Statue
+3723|Slaver Hound
+3721|Slaves
+30745|Sleeper Data Library
+21721|Sleeper Heat Nullifying Coil
+21571|Sleeper Technical Schematics
+32774|Small Ancillary Shield Booster
+5093|Small Asymmetric Remote Capacitor Transmitter
+5745|Small Automated Structural Restoration
+31045|Small Auxiliary Nano Pump I
+31586|Small Bay Loading Accelerator I
+5009|Small Brief Capacitor Overcharge I
+4787|Small Compact PbAcid Cap Battery
+31800|Small Core Defense Field Purger I
+5011|Small Electrochemical Capacitor Booster I
+6677|Small Focused Anode Pulse Particle Stream I
+3033|Small Focused Beam Laser II
+6671|Small Focused Modal Pulse Laser I
+8521|Small FS9 Regolith Compact Shield Extender
+5141|Small Ghoul Compact Energy Nosferatu
+4477|Small Gremlin Compact Energy Neutralizer
+31526|Small Hybrid Burst Aerator I
+31538|Small Hybrid Collision Accelerator I
+4529|Small Ia Polarized Armor Regenerator
+16433|Small Iax Enduring Remote Armor Repairer
+4531|Small Inefficient Armor Repair Unit
+4471|Small Infectious Scoped Energy Neutralizer
+5137|Small Knave Scoped Energy Nosferatu
+8531|Small Murky Compact Remote Shield Booster
+5089|Small Murky Remote Capacitor Transmitter
+5087|Small Partial E95a Remote Capacitor Transmitter
+5091|Small 'Regard' Remote Capacitor Transmitter
+9670|Small Rudimentary Concussion Bomb I
+8537|Small S95a Scoped Remote Shield Booster
+399|Small Shield Booster I
+400|Small Shield Booster II
+380|Small Shield Extender II
+9680|Small 'Vehemence' Shockwave Charge
+31620|Small Warhead Calefaction Catalyst I
+9784|Small YF12a Smartbomb
+25593|Smashed Trigger Unit
+33569|Snowball
+33571|Sodium Firework
+32993|Sodium Firework CXIV
+17459|Solid Pyroxeres
+34435|Soxfours Spaceboots
+12805|Spike M
+12618|Spike S
+242|Standard S
+37888|Starsi
+527|Stasis Webifier II
+16301|'Stoic' Core Equalizer I
+16275|Strontium Clathrates
+40701|Subcompact TEBS Interface
+2349|Supercomputers
+11690|Superconductor Rails
+9838|Superconductors
+2312|Supertensile Plastics
+5869|Suppressed Targeting System I
+2308|Suspended Plasma
+11558|Sustained Shield Emitter
+16678|Sylramic Fibers
+34206|Symmetry Decryptor
+28672|Synth Crash Booster
+3691|Synthetic Oil
+23135|Takmahl Gyro Ballast
+23146|Takmahl Magnetic Slab
+23147|Takmahl Tripolished Lens
+21077|Talocan Info Shards
+21082|Talocan System Interface Unit
+25594|Tangled Power Conduit
+4411|Target Breaker Amplification
+19806|Target Painter II
+4409|Target Spectrum Breaker
+8091|TE2100 Ample Light Missile Launcher
+25607|Telemetry Processor
+33360|Terahertz Metamaterials
+34436|The Friend Ship
+2537|Thermal Dissipation Amplifier I
+2539|Thermal Dissipation Amplifier II
+235|Thorium Charge L
+227|Thorium Charge M
+25602|Thruster Console
+16671|Titanium Carbide
+9852|Tobacco
+3719|Tourists
+2400|Toxic Metals
+3729|Toxic Waste
+2109|Tracking Disruptor II
+1999|Tracking Enhancer II
+29007|Tracking Speed Disruption Script
+9840|Transmitter
+12765|Tremor L
+12771|Tremor M
+12633|Tremor S
+25612|Trigger Unit
+25598|Tripped Power Circuit
+34746|Tristan Quafe SKIN Permanent
+34|Tritanium
+17252|True Sansha Brass Tag
+17256|True Sansha Diamond Tag
+14007|True Sansha Kinetic Plating
+16637|Tungsten
+16672|Tungsten Carbide
+11543|Tungsten Carbide Armor Plate
+232|Tungsten Charge L
+224|Tungsten Charge M
+216|Tungsten Charge S
+8175|TypeD Restrained Capacitor Power Relay
+5493|TypeD Restrained Expanded Cargo
+5647|TypeD Restrained Reinforced Bulkheads
+6131|TypeE Enduring Cargo Scanner
+17136|Ukomi Superconductors
+19952|Umbra Scoped Radar ECM
+16353|Upgraded Armor EM Hardener I
+16361|Upgraded Armor Explosive Hardener I
+16377|Upgraded Armor Thermal Hardener I
+16329|Upgraded EM Plating I
+236|Uranium Charge L
+228|Uranium Charge M
+220|Uranium Charge S
+15510|Valkyrie I
+21640|Valkyrie II
+1230|Veldspar
+28700|Vermillion Mykoserocin
+23705|Vespa EC600
+15508|Vespa I
+34429|Vincent Pryces Warp Disruption Field Generator
+3775|Viral Agent
+17460|Viscous Pyroxeres
+3713|Vitoc
+17444|Vivid Hemorphite
+12791|Void L
+12789|Void M
+12612|Void S
+11105|Vortex Compact Magnetic Field Stabilizer
+25606|Ward Console
+10998|Warp Core Stabilizer I
+3244|Warp Disruptor II
+22778|Warp Disrupt Probe
+447|Warp Scrambler I
+2486|Warrior I
+2488|Warrior II
+3645|Water
+37816|Women's 'Rocket' Dress festive
+30633|Wrecked Weapon Subroutines
+4025|X5 Enduring Stasis Webifier
+252|Xray M
+23141|Yan Jung Silk Armor
+23170|Yan Jung Trigonometric Laws
+13224|Zainou 'Deadeye' Small Hybrid Turret SH603
+19500|Zor's Custom Navigation Link
+39|Zydrine
+484|125mm Gatling AutoCannon I
+9131|220mm Medium Gallium Machine Gun
+9457|720mm Prototype Siege Cannon
+36913|Abaddon Blood Raiders SKIN Permanent
+16297|'Accord' Core Compensation
+23566|Advanced Drone Avionics
+3450|Afterburner
+17194|Angel Gold Tag
+7625|Anode Electron Particle Cannon I
+19992|Arch Angel EMP S
+41517|Armor EM Resistance Script
+41520|Armor Explosive Resistance Script
+16634|Atmospheric Gases
+2358|Biotech Research Reports
+21200|Blood Standard S
+30311|C3FTM Acid
+27359|Caldari Navy Nova Torpedo
+27413|Caldari Navy Scourge Heavy Assault Missile
+2345|Camera Drones
+1248|Capacitor Flux Coil II
+194|Carbonized Lead L
+35038|Catalyst Serpentis SKIN 30 Days
+25275|Celadon Cytoserocin
+18766|Centii AType Thermal Plating
+30028|Combat Scanner Probe I
+41266|Compact Electronics
+2344|Condensates
+12816|Conflagration L
+32995|Copper Firework CXIV
+18756|Corpii AType Explosive Plating
+18841|Corpum CType Energized EM Membrane
+16457|Crosslink Compact Ballistic Control System
+2367|Cryoprotectant Solution
+11545|Crystalline Carbonide Armor Plate
+17392|Data Chips
+11395|Deep Core Mining
+27335|Dread Guristas Scourge Rocket
+4393|Drone Damage Amplifier I
+12305|Drone Navigation
+23606|Drone Sharpshooting
+25615|Drone Transceiver
+30248|Emergent Combat Analyzer
+30271|Emergent Combat Intelligence
+41303|Enduring Conductors
+11239|Energized Armor Layering Membrane II
+11229|Energized Explosive Membrane II
+1319|Expanded Cargohold II
+22999|Federation Navy Thorium Charge L
+3693|Fertilizer
+3512|Focused Medium Pulse Laser II
+3451|Fuel Conservation
+30303|Fulleroferrocene
+33093|Gallente Destroyer
+20312|Guided Missile Precision
+27417|Guristas Mjolnir Heavy Assault Missile
+27383|Guristas Mjolnir Light Missile
+16648|Hafnium
+12608|Hail S
+2366|Hazmat Detection Systems
+2363|Heat Sink I
+566|Heavy Electron Blaster I
+6963|Heavy Modulated Energy Beam I
+12110|Homeless
+23093|Imperial Navy Xray M
+2360|Industrial Explosives
+1832|Inferno AutoTargeting Cruise Missile I
+24499|Inferno Fury Light Missile
+257|Infrared L
+249|Infrared M
+28294|'Integrated' Valkyrie
+33001|Ladar Sensor Compensation
+11689|Laser Focusing Crystals
+28201|Light Armor Maintenance Bot II
+16331|Limited EM Plating I
+11736|Lustering Alloy
+8263|Mark I Compact Reactor Control Unit
+8337|Mark I Compact Shield Power Relay
+16443|Medium Coaxial Compact Remote Armor Repairer
+4833|Medium Electrochemical Capacitor Booster I
+10836|Medium Shield Booster I
+33062|Men's 'Red Star' Tshirt
+37866|Men's 'Serpentis' Tshirt oliveblack
+30464|Metallofullerene Plating
+2327|Microfiber Shielding
+35795|Missile Precision Script
+2817|Mjolnir Rage Rocket
+34430|My God Its Full Of Holes
+20593|'Balefire' Rocket Launcher
+1202|Civilian Mining Drone
+9608|Limited Kinetic Deflection Field I
+11539|Nanoelectrical Microprocessor
+33332|Navy Cap Booster 50
+2354|Neocoms
+16667|Neo Mercurite
+2352|Nuclear Reactors
+16525|OE5200 Rocket Launcher
+19213|Pithum CType Kinetic Deflection Amplifier
+12191|Plagioclase Processing
+9846|Planetary Vehicles
+2406|Planetology
+16644|Platinum
+34427|Polaris Eviction Notice
+1541|Power Diagnostic System II
+41305|Precise Compounds
+16652|Promethium
+188|Proton M
+255|Radio L
+1875|Rapid Light Missile Launcher I
+16299|'Repose' Core Compensation
+28324|Republic Fleet Carbonized Lead L
+31888|Republic Fleet Warrior
+41308|Restrained Compounds
+34422|Rooks  Kings  The Clarion Call Compilation
+20028|Sanshas Microwave XL
+16349|'Scarab' Layered Plating I
+12820|Scorch L
+24541|Scourge Precision Cruise Missile
+24501|Scourge Precision Light Missile
+12196|Scrapmetal Processing
+1973|Sensor Booster I
+3433|Sensor Linking
+443|Ship Scanner I
+30486|Sisters Combat Scanner Probe
+31083|Small Salvage Tackle I
+377|Small Shield Extender I
+33890|Small Transverse Bulkhead I
+37847|Standup ASMLMD Missile
+34260|Surgical Warp Disrupt Probe
+444|Survey Scanner I
+2333|Survey Scanner II
+23145|Takmahl Solid Mox
+21085|Talocan Automation Accounts
+29009|Targeting Range Script
+12709|Target Painter I
+2319|Test Cultures
+11691|Thermonuclear Trigger Unit
+3443|Trade
+12836|Transcranial Microcontrollers
+14013|True Sansha Explosive Plating
+17261|True Sansha Silver Tag
+5599|TypeD Restrained Nanofiber Structure
+5631|TypeD Restrained Overdrive Injector
+8295|TypeD Restrained Shield Flux Coil
+9568|Upgraded Thermal Dissipation Amplifier I
+16337|Upgraded Thermal Plating I
+23729|Valkyrie SW600
+28701|Viridian Mykoserocin
+11640|Warp Core Stabilizer II
+3242|Warp Disruptor I
+2328|WaterCooled CPU
+37865|Women's 'Serpentis' Tshirt oliveblack
+30605|Wrecked Electromechanical Component
+7997|XR3200 Heavy Missile Bay
+23139|Yan Jung Glass Scale
+23171|Yan Jung Semiotic Theory

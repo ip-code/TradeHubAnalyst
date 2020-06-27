@@ -1,0 +1,98 @@
+17624|Elena Gazky's DNA
+3824|Crystal Egg
+23141|Yan Jung Silk Armor
+23170|Yan Jung Trigonometric Laws
+37888|Starsi
+21571|Sleeper Technical Schematics
+23146|Takmahl Magnetic Slab
+4569|Medium Ia Polarized Armor Regenerator
+14007|True Sansha Kinetic Plating
+4833|Medium Electrochemical Capacitor Booster I
+17252|True Sansha Brass Tag
+16521|'Malkuth' Rocket Launcher I
+8907|250mm Light Gallium Cannon
+232|Tungsten Charge L
+8263|Mark I Compact Reactor Control Unit
+19075|Centii AType Small Remote Capacitor Transmitter
+7293|150mm Compressed Coil Gun I
+2308|Suspended Plasma
+21815|Elite Drone AI
+8175|TypeD Restrained Capacitor Power Relay
+16483|Large Murky Remote Capacitor Transmitter
+34575|Antikythera Element
+20307|Scourge Heavy Assault Missile
+18841|Corpum CType Energized EM Membrane
+241|Infrared S
+20114|Datacore  Propulsion Subsystems Engineering
+16365|Experimental Armor Explosive Hardener I
+220|Uranium Charge S
+2537|Thermal Dissipation Amplifier I
+25602|Thruster Console
+2506|Mjolnir Torpedo
+499|Light Missile Launcher I
+34429|Vincent Pryces Warp Disruption Field Generator
+41305|Precise Compounds
+17204|Blood Brass Tag
+11534|Gravimetric Sensor Cluster
+21727|Guristas Gravity Focuser
+2286|Planktic Colonies
+20416|Datacore  Nanite Engineering
+24443|Shield Boost Amplifier II
+33180|Scan Rangefinding Array I
+394|Shield Recharger II
+20412|Datacore  Plasma Physics
+31045|Small Auxiliary Nano Pump I
+30258|Resonance Calibration Matrix
+15601|Caldari Navy Captain Insignia III
+2817|Mjolnir Rage Rocket
+6569|ML3 Scoped Survey Scanner
+10250|Mining Drone II
+15593|Federation Navy Fleet Major Insignia I
+20421|Datacore  Amarrian Starship Engineering
+2312|Supertensile Plastics
+2360|Industrial Explosives
+17317|Fermionic Condensates
+33199|Scan Pinpointing Array II
+13995|Domination Thermal Dissipation Field
+24531|Nova Fury Cruise Missile
+34427|Polaris Eviction Notice
+16309|'Collateral' Adaptive Nano Plating I
+30303|Fulleroferrocene
+2547|Kinetic Deflection Amplifier II
+30586|Malfunctioning Power Cores
+16671|Titanium Carbide
+2531|Explosive Deflection Amplifier II
+12773|Barrage M
+12563|Scorch S
+2367|Cryoprotectant Solution
+443|Ship Scanner I
+27383|Guristas Mjolnir Light Missile
+2287|Complex Organisms
+16637|Tungsten
+41266|Compact Electronics
+12820|Scorch L
+12771|Tremor M
+16655|Crystallite Alloy
+17270|Shadow Serpentis Gold Tag
+17196|Angel Platinum Tag
+6923|Heavy Modulated Pulse Energy Beam I
+34419|Jump Fatigue Recovery Agent
+21896|Republic Fleet EMP M
+16657|Rolled Tungsten Alloy
+30377|FulleriteC320
+30372|FulleriteC70
+11543|Tungsten Carbide Armor Plate
+33176|Scan Acquisition Array I
+2345|Camera Drones
+27321|Caldari Navy Mjolnir Rocket
+488|280mm Howitzer Artillery I
+31179|Medium Polycarbon Engine Housing I
+23111|Imperial Navy Ultraviolet L
+3887|CoProcessor I
+16633|Hydrocarbons
+23071|Imperial Navy Multifrequency S
+2354|Neocoms
+2575|Radar ECM II
+24477|Scourge Javelin Rocket
+444|Survey Scanner I
+41268|Compact Conductors

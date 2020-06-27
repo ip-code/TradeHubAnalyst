@@ -1,0 +1,32 @@
+﻿<Window x:Class="TradeHubAnalyst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:views="clr-namespace:TradeHubAnalyst.Views" 
+        ResizeMode="CanMinimize"
+        Width="1003"
+        Height="678"
+        >
+
+    <Grid>
+        <TabControl>
+
+            <TabItem Header="Hauling">
+                <views:HaulingView />
+            </TabItem>
+
+            <TabItem Header="Station Trading">
+                <views:StationTradingView />
+            </TabItem>
+
+            <TabItem Header="Database">
+                <views:DatabaseView />
+            </TabItem>
+    
+            <TabItem Header="About">
+                <views:AboutView />
+            </TabItem>
+    
+        </TabControl>
+    </Grid>
+</Window>
