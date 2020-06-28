@@ -1,8 +1,8 @@
 ﻿<UserControl x:Class="TradeHubAnalyst.Views.DatabaseView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:TradeHubAnalyst.Views">
 
     <UserControl.Resources>
@@ -11,40 +11,39 @@
                 <PropertyGroupDescription PropertyName="StartTime.Date" />
             </CollectionViewSource.GroupDescriptions>
         </CollectionViewSource>
-
     </UserControl.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Margin="20,20,0,5"><Bold>Items</Bold></TextBlock>
-        
+
         <Grid Grid.Row="1" Margin="20, 0, 20, 0">
         <Border BorderBrush="Gainsboro" BorderThickness="1">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="140"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="140" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <StackPanel Grid.Row="0" Grid.Column="0">
 
                         <TextBlock Margin="20,20,20,10" Name="tbStatus" Text="{Binding Path=ItemCount}" />
                         <Grid Margin="20,0,20,20">
                             <TextBlock Name="tbPbMessage" Visibility="Visible">If you would like to update item database, please click on the button.</TextBlock>
-                            <ProgressBar Width="Auto" Height="15" Name="pbRefresh" Visibility="Hidden"/>
+                            <ProgressBar Width="Auto" Height="15" Name="pbRefresh" Visibility="Hidden" />
                         </Grid>
                         <StackPanel Orientation="Horizontal" Margin="20,0,0,20">
-                            <TextBlock>Maximum update process age: </TextBlock>
+                            <TextBlock>Maximum item age before new update: </TextBlock>
                             <TextBox Width="30" Name="tbMaxAge" Text="{Binding Path=MaxAge, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,0" />
                             <Popup Placement="Bottom" PlacementTarget="{Binding ElementName=tbMaxAge}" IsOpen="{Binding Path=PopupMaxAge, Mode=OneWay}" HorizontalOffset="2" VerticalOffset="2">
                                 <Border BorderBrush="Gainsboro" BorderThickness="1" Background="WhiteSmoke">
@@ -69,33 +68,30 @@
             <Border BorderBrush="Gainsboro" BorderThickness="1">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
-
-
-
-                    <DataGrid Grid.Row="0" ItemsSource="{Binding Path=Stations}" AutoGenerateColumns="False" IsReadOnly="True" 
+                    <DataGrid Grid.Row="0" ItemsSource="{Binding Path=Stations}" AutoGenerateColumns="False" IsReadOnly="True"
                   GridLinesVisibility="All" HorizontalGridLinesBrush="Gainsboro" VerticalGridLinesBrush="Gainsboro" HeadersVisibility="Column"
                   HorizontalAlignment="Left" VerticalAlignment="Stretch" IsSynchronizedWithCurrentItem="False"
                   HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" SelectionUnit="FullRow" Name="gridMain" Margin="20" Width="Auto">
 
                         <DataGrid.Resources>
                             <Style TargetType="{x:Type DataGrid}">
-                                <Setter Property="BorderBrush" Value="Gainsboro"/>
-                                <Setter Property="BorderThickness" Value="1,1,0,0"/>
+                                <Setter Property="BorderBrush" Value="Gainsboro" />
+                                <Setter Property="BorderThickness" Value="1,1,0,0" />
                             </Style>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
-                                <Setter Property="BorderThickness" Value="0,0,1,0"/>
+                                <Setter Property="BorderThickness" Value="0,0,1,0" />
                                 <Setter Property="Padding" Value="7,2,0,3" />
                             </Style>
-                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray"/>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGray" />
                         </DataGrid.Resources>
                         <DataGrid.CellStyle>
                             <Style TargetType="DataGridCell">
-                                <Setter Property="BorderThickness" Value="0"/>
-                                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
                             </Style>
                         </DataGrid.CellStyle>
 
@@ -107,7 +103,7 @@
                                     <DataTemplate>
                                         <StackPanel Orientation="Horizontal">
                                             <Button Name="btnEdit" Content="Edit" Click="btnEdit_Click" Width="40" Margin="10,0,10,0" />
-                                            <Button Name="btnDelete" Content="Delete" Click="btnDelete_Click" Width="40"/>
+                                            <Button Name="btnDelete" Content="Delete" Click="btnDelete_Click" Width="40" />
                                         </StackPanel>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
@@ -115,17 +111,16 @@
                         </DataGrid.Columns>
                     </DataGrid>
 
-
                     <Grid Grid.Row="1" Width="Auto" Margin="0,0,0,20">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"/>
-                            <ColumnDefinition Width="100"/>
-                            <ColumnDefinition Width="80"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="80" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="100" />
                         </Grid.ColumnDefinitions>
 
                         <TextBlock Grid.Column="0" Margin="20,2,0,0">ID:</TextBlock>
@@ -137,8 +132,7 @@
                         </Popup>
                         <TextBlock Grid.Column="2" Margin="20,2,0,0">Name:</TextBlock>
                         <TextBox Grid.Column="3" Name="tbStationName" Text="{Binding Path=NewStationName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                        <Button Grid.Column="4" Name="btnSaveStation" Content="Add new" Margin="20,0,20,0" Click="btnSaveStation_Click"/>
-
+                        <Button Grid.Column="4" Name="btnSaveStation" Content="Add new" Margin="20,0,20,0" Click="btnSaveStation_Click" />
                     </Grid>
                 </Grid>
             </Border>
@@ -150,10 +144,10 @@
             <Border BorderBrush="Gainsboro" BorderThickness="1">
                 <Grid Width="Auto">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
 
                     <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,20,0,5">
@@ -172,7 +166,6 @@
                                 <TextBlock Background="Transparent" Margin="2" Text="Only numbers allowed!" />
                             </Border>
                         </Popup>
-                        
                     </StackPanel>
                     <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,5">
                         <TextBlock  Margin="20,2,0,0" Width="150">Maximum Price:</TextBlock>
@@ -184,7 +177,6 @@
                         </Popup>
                         <TextBlock Margin="10,2,0,0" Width="150">ISK</TextBlock>
                         <CheckBox Margin="0,2,0,0" IsChecked="{Binding Path=IgnoreZeroValues}">Ignore zero values</CheckBox>
-                        
                     </StackPanel>
                     <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,0,10">
                         <TextBlock Margin="20,2,0,0" Width="150">Trading Volume:</TextBlock>
@@ -199,15 +191,11 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="3" Orientation="Horizontal">
-                        <Button Name="btnSaveFilters" Content="Save" Margin="20,0,20,20" Width="100" HorizontalAlignment="Left" Click="btnSaveFilters_Click"/>
+                        <Button Name="btnSaveFilters" Content="Save" Margin="20,0,20,20" Width="100" HorizontalAlignment="Left" Click="btnSaveFilters_Click" />
                         <TextBlock Margin="30,2,0,0" Width="150" Name="tbSaveFiltersMessage" Opacity="0">New filters saved!</TextBlock>
                     </StackPanel>
-
-
                 </Grid>
             </Border>
         </Grid>
-
-
     </Grid>
 </UserControl>

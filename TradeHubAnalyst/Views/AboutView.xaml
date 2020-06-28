@@ -8,18 +8,18 @@
 
     <Grid>
         <TextBlock Margin="20">
-            TradeHubAnalyst <TextBlock Name="tbVersion"></TextBlock><LineBreak/>
-            <Hyperlink Name="hlVersion" TextDecorations="None" IsEnabled="False" NavigateUri="http://bretonis.mygamesonline.org" RequestNavigate="Hyperlink_RequestNavigate">
+            TradeHubAnalyst <TextBlock Name="tbVersion"></TextBlock><LineBreak />
+            <Hyperlink Name="hlVersion" TextDecorations="None" IsEnabled="False" RequestNavigate="Hyperlink_RequestNavigate">
                     <TextBlock Name="tbVerDescription">You are running the latest version!</TextBlock>
             </Hyperlink>
-            <LineBreak/>
-            <LineBreak/>
-            TradeHubAnalyst is a windows application [.exe] designed for trading between stations. It collects data for all of the items of<LineBreak/>
-            Eve Online from file <Bold>invTypes.xls.bz2</Bold> downloaded from 
+            <LineBreak />
+            <LineBreak />
+            TradeHubAnalyst is a windows application [.exe] designed for trading between stations. It collects data for all of the items of<LineBreak />
+            Eve Online from file <Bold>invTypes.xls.bz2</Bold> downloaded from
             <Hyperlink TextDecorations="None" NavigateUri="https://www.fuzzwork.co.uk/dump/latest/" RequestNavigate="Hyperlink_RequestNavigate">
                    https://www.fuzzwork.co.uk/dump/latest/
             </Hyperlink>
-             and performs filtration<LineBreak /> based upon trading data downloaded from 
+             and performs filtration<LineBreak /> based upon trading data downloaded from
             <Hyperlink TextDecorations="None" NavigateUri="https://evemarketer.com/" RequestNavigate="Hyperlink_RequestNavigate">
                     EVEMarketer
             </Hyperlink>
@@ -32,15 +32,15 @@
                     https://evemarketer.com/types
             </Hyperlink>
             and then calculated to find potential profitable trades<LineBreak />
-            between trade hubs.<LineBreak/>
-            <LineBreak/>
+            between trade hubs.<LineBreak />
+            <LineBreak />
             Default application trade hubs:<LineBreak />
-            &#x2022; Jita IV – Moon 4 – Caldari Navy Assembly Plant<LineBreak/>
-            &#x2022; Amarr VIII (Oris) – Emperor Family Academy<LineBreak/>
-            &#x2022; Dodixie IX – Moon 20 – Federation Navy Assembly Plant<LineBreak/>
-            &#x2022; Hek VIII – Moon 12 – Boundless Creation Factory<LineBreak/>
-            &#x2022; Rens VI – Moon 8 – Brutor Tribe Treasury<LineBreak/>
-            <LineBreak/>
+            &#x2022; Jita IV – Moon 4 – Caldari Navy Assembly Plant<LineBreak />
+            &#x2022; Amarr VIII (Oris) – Emperor Family Academy<LineBreak />
+            &#x2022; Dodixie IX – Moon 20 – Federation Navy Assembly Plant<LineBreak />
+            &#x2022; Hek VIII – Moon 12 – Boundless Creation Factory<LineBreak />
+            &#x2022; Rens VI – Moon 8 – Brutor Tribe Treasury<LineBreak />
+            <LineBreak />
             For additional information
             <Hyperlink TextDecorations="None" NavigateUri="http://bretonis.mygamesonline.org/tradehubanalyst" RequestNavigate="Hyperlink_RequestNavigate">
                     click here.

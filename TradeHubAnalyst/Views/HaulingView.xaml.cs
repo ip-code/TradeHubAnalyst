@@ -18,13 +18,13 @@ namespace TradeHubAnalyst.Views
 {
     public partial class HaulingView : UserControl
     {
-        CancellationTokenSource ctSource;
+        private CancellationTokenSource ctSource;
         public bool isTaskRunning = false;
         private HaulingViewModel viewModel = new HaulingViewModel();
-        AsyncDownloadWebsites downloadWorker;
-        AsyncCalculateHauling calculateWorker;
-        Progress<DownloadProgressReportModel> progress;
-        long oldTime;
+        private AsyncDownloadWebsites downloadWorker;
+        private AsyncCalculateHauling calculateWorker;
+        private Progress<DownloadProgressReportModel> progress;
+        private long oldTime;
 
         public HaulingView()
         {
@@ -36,12 +36,12 @@ namespace TradeHubAnalyst.Views
         {
             if (!isTaskRunning)
             {
-                oldTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                oldTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
                 isTaskRunning = true;
 
                 pbRefresh.Value = 0;
-                tbStatus.Text = "Initializing refresh...";
+                tbStatus.Text = "Step 1/2: Initializing refresh...";
                 btnRefresh.Content = "Cancel";
 
                 viewModel.SaveFiltersUponStart();
@@ -74,11 +74,11 @@ namespace TradeHubAnalyst.Views
 
                     if (downloadedData.finished_with_errors)
                     {
-                        tbStatus.Text = "Trades refreshed with some errors on " + DateTime.Now.ToString();
+                        tbStatus.Text = "Trades refreshed with some errors on " + DateTimeOffset.Now.ToUnixTimeSeconds().ToString();
                     }
                     else
                     {
-                        tbStatus.Text = "Trades refreshed on " + DateTime.Now.ToString();
+                        tbStatus.Text = "Trades refreshed on " + DateTimeOffset.Now.ToUnixTimeSeconds().ToString();
                     }
                 }
                 catch (OperationCanceledException)
@@ -92,7 +92,6 @@ namespace TradeHubAnalyst.Views
                     pbRefresh.Value = 0;
                     btnRefresh.Content = "Refresh data";
                     tbStatus.Text = "Refresh cancelled. To begin, please refresh data.";
-
                 }
 
                 isTaskRunning = false;
@@ -109,9 +108,9 @@ namespace TradeHubAnalyst.Views
         {
             pbRefresh.Value = e.PercentageComplete;
 
-            if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() > (oldTime + 2))
+            if (DateTimeOffset.Now.ToUnixTimeSeconds() > (oldTime + 2))
             {
-                oldTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                oldTime = DateTimeOffset.Now.ToUnixTimeSeconds();
                 tbStatus.Text = e.MessageRemaining;
             }
         }
@@ -122,14 +121,15 @@ namespace TradeHubAnalyst.Views
             e.Handled = true;
         }
 
-        private void gridMain_SelectionChanged(object sender, SelectionChangedEventArgs e) {  }
+        private void gridMain_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
 
         public void updateTable(ObservableCollection<CalculateTradeModel> trades)
         {
             if (!gridMain.IsEnabled)
             {
                 gridMain.IsEnabled = true;
-
             }
 
             List<CalculateTradeModel> SortedList = trades.OrderByDescending(o => o.Profit).ToList();
@@ -252,7 +252,3 @@ namespace TradeHubAnalyst.Views
         }
     }
 }
-
-
-        
-

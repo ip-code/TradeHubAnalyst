@@ -11,20 +11,17 @@ namespace TradeHubAnalyst.Libraries
 {
     public class AsyncDownloadWebsites
     {
-
         private IProgress<DownloadProgressReportModel> progress;
         private int startedItem;
         private int finishedItem;
         private int maxAsync;
         private int totalItems;
-        private DateTime startTime;
+        private long startTime;
         private CancellationToken token;
         private bool finishedWithErrors = false;
 
-
         public async Task<AsyncDownloadResultModel> DoWork(IProgress<DownloadProgressReportModel> progressSent, CancellationToken cancellationToken)
         {
-
             List<FormattedTradesModel> resultData = new List<FormattedTradesModel>();
 
             List<string[]> filteredItems = StaticMethods.GetFilteredItems();
@@ -37,7 +34,7 @@ namespace TradeHubAnalyst.Libraries
 
             totalItems = filteredItems.Count;
 
-            startTime = DateTime.Now;
+            startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
             startedItem = 0;
             finishedItem = 0;
@@ -47,9 +44,7 @@ namespace TradeHubAnalyst.Libraries
 
             while (startedItem < totalItems)
             {
-
                 token.ThrowIfCancellationRequested();
-
 
                 if (maxAsync < filters.max_async_tasks)
                 {
@@ -108,7 +103,6 @@ namespace TradeHubAnalyst.Libraries
                 }
 
                 driver.Quit();
-
             }
             catch (Exception)
             {
@@ -124,7 +118,7 @@ namespace TradeHubAnalyst.Libraries
                 DownloadProgressReportModel report = new DownloadProgressReportModel();
 
                 report.PercentageComplete = progressPercentage;
-                report.MessageRemaining = "Working" + StaticMethods.EstimatedTime(startTime, finishedItem, totalItems);
+                report.MessageRemaining = "Step 1/2: Downloading data" + StaticMethods.EstimatedTime(startTime, finishedItem, totalItems);
 
                 progress.Report(report);
             }
@@ -133,7 +127,5 @@ namespace TradeHubAnalyst.Libraries
 
             return result;
         }
-
     }
-
 }

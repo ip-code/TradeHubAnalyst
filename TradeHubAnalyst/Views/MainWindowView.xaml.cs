@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System.Windows;
+using TradeHubAnalyst.Libraries;
 using TradeHubAnalyst.ViewModels;
 
 namespace TradeHubAnalyst

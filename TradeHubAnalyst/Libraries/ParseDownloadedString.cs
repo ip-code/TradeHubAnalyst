@@ -14,7 +14,6 @@ namespace TradeHubAnalyst.Libraries
         private decimal sellPrice = 0.0m;
         private decimal buyPrice = 0.0m;
 
-
         public FormattedTradesModel Trades(string typeID, string rawData)
         {
             string[] websiteData = rawData.Split(new[] { "tbody" }, StringSplitOptions.None);
@@ -30,7 +29,6 @@ namespace TradeHubAnalyst.Libraries
             TradeData.RemoveAt(tradeData.Length - 1);
             TradePerStation buyPerStation = MakeList(TradeData, 1);
 
-
             FormattedTradesModel result = new FormattedTradesModel();
             result.type_id = Convert.ToInt32(typeID);
             result.has_data = true;
@@ -42,7 +40,6 @@ namespace TradeHubAnalyst.Libraries
             result.buy_price = buyPrice;
 
             return result;
-
         }
 
         private TradePerStation MakeList(List<string> TradeData, int type)
@@ -140,7 +137,6 @@ namespace TradeHubAnalyst.Libraries
 
                         if (age < 1000)
                         {
-
                             SingleTradeModel newTrade = new SingleTradeModel();
                             newTrade.Price = Price;
                             newTrade.Quantity = Quantity;

@@ -5,9 +5,9 @@ namespace TradeHubAnalyst.Libraries
 {
     public class HaulingDataGridComparer : IComparer
     {
-        string columnName;
+        private string columnName;
 
-        int sortDirection;
+        private int sortDirection;
 
         public HaulingDataGridComparer(string cn, int sd)
         {
@@ -49,4 +49,3 @@ namespace TradeHubAnalyst.Libraries
         }
     }
 }
-

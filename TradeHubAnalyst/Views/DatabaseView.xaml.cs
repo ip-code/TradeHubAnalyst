@@ -12,17 +12,17 @@ using TradeHubAnalyst.ViewModels;
 
 namespace TradeHubAnalyst.Views
 {
-
     public partial class DatabaseView : UserControl
     {
-        CancellationTokenSource ctSource;
+        private CancellationTokenSource ctSource;
         public bool isTaskRunning = false;
         private DatabaseViewModel viewModel = new DatabaseViewModel();
         private int stationClickedId;
         private Boolean isStationInEditing = false;
-        Progress<DownloadProgressReportModel> progress;
-        AsyncUpdateItemDatabase worker;
-        long oldTime;
+        private Progress<DownloadProgressReportModel> progress;
+        private AsyncUpdateItemDatabase worker;
+        private long oldTime;
+
         public DatabaseView()
         {
             DataContext = viewModel;
@@ -34,13 +34,13 @@ namespace TradeHubAnalyst.Views
         {
             if (!isTaskRunning)
             {
-                oldTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                oldTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
                 isTaskRunning = true;
 
                 pbRefresh.Value = 0;
                 btnRefresh.Content = "Cancel";
-                tbStatus.Text = "Downloading item list...";
+                tbStatus.Text = "Step 1/4: Downloading new item list...";
                 tbPbMessage.Visibility = Visibility.Hidden;
                 pbRefresh.Visibility = Visibility.Visible;
                 tbMaxAge.IsEnabled = false;
@@ -74,7 +74,6 @@ namespace TradeHubAnalyst.Views
                     {
                         tbPbMessage.Text = "If you would like to update item database, please click on the button.";
                     }
-
                 }
                 catch (OperationCanceledException)
                 {
@@ -105,9 +104,9 @@ namespace TradeHubAnalyst.Views
         {
             pbRefresh.Value = e.PercentageComplete;
 
-            if (DateTimeOffset.UtcNow.ToUnixTimeSeconds() > (oldTime + 2))
+            if (DateTimeOffset.Now.ToUnixTimeSeconds() > (oldTime + 2))
             {
-                oldTime = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                oldTime = DateTimeOffset.Now.ToUnixTimeSeconds();
                 tbStatus.Text = e.MessageRemaining;
             }
         }
@@ -123,11 +122,9 @@ namespace TradeHubAnalyst.Views
             viewModel.SaveMaxAge();
             tbSaveMaxAgeMessage.Opacity = 1;
 
-
             BackgroundWorker worker = new BackgroundWorker();
             worker.DoWork += Worker_DoWork2;
             worker.RunWorkerAsync();
-
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -139,7 +136,6 @@ namespace TradeHubAnalyst.Views
             stationClickedId = stationClicked.id;
             tbStationId.Text = stationClicked.type_id.ToString();
             tbStationName.Text = stationClicked.name.ToString();
-
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -174,7 +170,6 @@ namespace TradeHubAnalyst.Views
 
             tbStationId.Text = "";
             tbStationName.Text = "";
-
         }
 
         private void btnSaveFilters_Click(object sender, RoutedEventArgs e)
@@ -182,11 +177,9 @@ namespace TradeHubAnalyst.Views
             viewModel.SaveFilters();
             tbSaveFiltersMessage.Opacity = 1;
 
-
             BackgroundWorker worker = new BackgroundWorker();
             worker.DoWork += Worker_DoWork;
             worker.RunWorkerAsync();
-
         }
 
         private void Worker_DoWork(object sender, DoWorkEventArgs e)
@@ -205,7 +198,6 @@ namespace TradeHubAnalyst.Views
                     });
                 }
                 catch (Exception) { }
-
             }
         }
 
@@ -225,11 +217,7 @@ namespace TradeHubAnalyst.Views
                     });
                 }
                 catch (Exception) { }
-
             }
         }
-
-
-
     }
 }

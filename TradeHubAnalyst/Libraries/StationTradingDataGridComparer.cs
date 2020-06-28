@@ -5,9 +5,9 @@ namespace TradeHubAnalyst.Libraries
 {
     public class StationTradingDataGridComparer : IComparer
     {
-        string columnName;
+        private string columnName;
 
-        int sortDirection;
+        private int sortDirection;
 
         public StationTradingDataGridComparer(string cn, int sd)
         {

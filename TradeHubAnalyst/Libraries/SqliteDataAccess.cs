@@ -110,9 +110,9 @@ namespace TradeHubAnalyst.Libraries
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
                 cnn.Execute(@"
-                    INSERT INTO item_filters (id, max_volume, max_price, min_trade_volume, ignore_zero, filtered_items, 
+                    INSERT INTO item_filters (id, max_volume, max_price, min_trade_volume, ignore_zero, filtered_items,
                     selected_hauling_station_id, user_cargo_capacity, user_available_money, selected_station_trading_station_id, updated_item_max_age, max_async_tasks, user_brokers_fee, user_sales_tax)
-                    VALUES (@id, @max_volume, @max_price, @min_trade_volume, @ignore_zero, @filtered_items, @selected_hauling_station_id, 
+                    VALUES (@id, @max_volume, @max_price, @min_trade_volume, @ignore_zero, @filtered_items, @selected_hauling_station_id,
                     @user_cargo_capacity, @user_available_money, @selected_station_trading_station_id, @updated_item_max_age, @max_async_tasks, @user_brokers_fee, @user_sales_tax)", filters);
             }
         }
@@ -121,11 +121,11 @@ namespace TradeHubAnalyst.Libraries
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute(@"UPDATE item_filters 
-                    SET max_volume=@max_volume, max_price=@max_price, min_trade_volume=@min_trade_volume, ignore_zero=@ignore_zero, 
-                    filtered_items=@filtered_items, selected_hauling_station_id=@selected_hauling_station_id, user_cargo_capacity=@user_cargo_capacity, 
-                    user_available_money=@user_available_money, selected_station_trading_station_id=@selected_station_trading_station_id, 
-                    updated_item_max_age=@updated_item_max_age, max_async_tasks=@max_async_tasks, user_brokers_fee=@user_brokers_fee, user_sales_tax=@user_sales_tax 
+                cnn.Execute(@"UPDATE item_filters
+                    SET max_volume=@max_volume, max_price=@max_price, min_trade_volume=@min_trade_volume, ignore_zero=@ignore_zero,
+                    filtered_items=@filtered_items, selected_hauling_station_id=@selected_hauling_station_id, user_cargo_capacity=@user_cargo_capacity,
+                    user_available_money=@user_available_money, selected_station_trading_station_id=@selected_station_trading_station_id,
+                    updated_item_max_age=@updated_item_max_age, max_async_tasks=@max_async_tasks, user_brokers_fee=@user_brokers_fee, user_sales_tax=@user_sales_tax
                     WHERE id=@id", filters);
             }
         }
@@ -134,6 +134,5 @@ namespace TradeHubAnalyst.Libraries
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
-
     }
 }

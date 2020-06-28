@@ -2,11 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-        xmlns:views="clr-namespace:TradeHubAnalyst.Views" 
+        xmlns:views="clr-namespace:TradeHubAnalyst.Views"
         ResizeMode="CanMinimize"
         Width="1003"
-        Height="678"
-        >
+        Height="678">
 
     <Grid>
         <TabControl>
@@ -22,11 +21,10 @@
             <TabItem Header="Database">
                 <views:DatabaseView />
             </TabItem>
-    
+
             <TabItem Header="About">
                 <views:AboutView />
             </TabItem>
-    
         </TabControl>
     </Grid>
 </Window>

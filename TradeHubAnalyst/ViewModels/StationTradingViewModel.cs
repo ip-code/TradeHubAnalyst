@@ -12,9 +12,11 @@ namespace TradeHubAnalyst.ViewModels
 {
     public partial class StationTradingViewModel : INotifyPropertyChanged
     {
-        ObservableCollection<CalculateStationTradeModel> trades;
+        private ObservableCollection<CalculateStationTradeModel> trades;
         private int comboBoxSelectedId;
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         private string user_brokers_fee;
         private string user_sales_tax;
         private bool popupUserBrokersFee = false;
@@ -52,7 +54,6 @@ namespace TradeHubAnalyst.ViewModels
                     comboBoxSelectedId = newStation.id;
                 }
             }
-
         }
 
         public void SaveFiltersUponStart()
@@ -91,9 +92,9 @@ namespace TradeHubAnalyst.ViewModels
 
         public ObservableCollection<CalculateStationTradeModel> Trades
         {
-            get 
-            { 
-                return trades; 
+            get
+            {
+                return trades;
             }
 
             set

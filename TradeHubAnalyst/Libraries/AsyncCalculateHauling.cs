@@ -28,7 +28,7 @@ namespace TradeHubAnalyst.Libraries
 
             ObservableCollection<CalculateTradeModel> cTrades = new ObservableCollection<CalculateTradeModel>();
 
-            DateTime startTime = DateTime.Now;
+            long startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
             for (int i = 0; i < totalItems; i++)
             {
@@ -51,15 +51,13 @@ namespace TradeHubAnalyst.Libraries
                 DownloadProgressReportModel report = new DownloadProgressReportModel();
 
                 report.PercentageComplete = progressPercentage;
-                report.MessageRemaining = "Working" + StaticMethods.EstimatedTime(startTime, i, totalItems);
+                report.MessageRemaining = "Step 2/2: Calculating data" + StaticMethods.EstimatedTime(startTime, i, totalItems);
 
                 progress.Report(report);
-
             }
 
             return cTrades;
         }
-
 
         public CalculateTradeModel TradePrepare(int TypeID, string itemName, string itemVolume, FormattedTradesModel formattedTrades)
         {
@@ -73,7 +71,6 @@ namespace TradeHubAnalyst.Libraries
 
             sellPrice = formattedTrades.sell_price;
             buyPrice = formattedTrades.buy_price;
-
 
             sellPrice = sellPrice + (sellPrice * minProfit);
             buyPrice = buyPrice - (buyPrice * minProfit);
@@ -130,7 +127,6 @@ namespace TradeHubAnalyst.Libraries
                                     {
                                         string[] stringValue2 = (userAvailableMoney / sellTrades[currentSellOrder].Price).ToString(CultureInfo.InvariantCulture).Split('.');
                                         maxQuantity = Convert.ToInt32(stringValue2[0]);
-
                                     }
                                     else
                                     {
@@ -224,7 +220,6 @@ namespace TradeHubAnalyst.Libraries
                                         isMaxQuantityValid = false;
                                     }
                                 }
-
                             }
                             else
                             {
@@ -262,11 +257,9 @@ namespace TradeHubAnalyst.Libraries
 
                     return newTrade;
                 }
-
             }
 
             return null;
         }
-
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Globalization;
 using System.Threading;
 using TradeHubAnalyst.Models;
 
@@ -33,7 +32,7 @@ namespace TradeHubAnalyst.Libraries
 
             ObservableCollection<CalculateStationTradeModel> cTrades = new ObservableCollection<CalculateStationTradeModel>();
 
-            DateTime startTime = DateTime.Now;
+            long startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
             for (int i = 0; i < totalItems; i++)
             {
@@ -56,15 +55,13 @@ namespace TradeHubAnalyst.Libraries
                 DownloadProgressReportModel report = new DownloadProgressReportModel();
 
                 report.PercentageComplete = progressPercentage;
-                report.MessageRemaining = "Working" + StaticMethods.EstimatedTime(startTime, i, totalItems);
+                report.MessageRemaining = "Step 2/2: Calculating data" + StaticMethods.EstimatedTime(startTime, i, totalItems);
 
                 progress.Report(report);
-
             }
 
             return cTrades;
         }
-
 
         public CalculateStationTradeModel TradePrepare(int TypeID, string itemName, string itemVolume, FormattedTradesModel formattedTrades)
         {
@@ -72,8 +69,8 @@ namespace TradeHubAnalyst.Libraries
             TradePerStation buyPerStation = formattedTrades.buy_per_station;
 
             hasSell = formattedTrades.has_sell;
-            hasBuy = formattedTrades.has_buy;          
-            
+            hasBuy = formattedTrades.has_buy;
+
             if (hasBuy && hasSell)
             {
                 for (int i = 0; i < sellPerStation.station_ids.Count; i++)

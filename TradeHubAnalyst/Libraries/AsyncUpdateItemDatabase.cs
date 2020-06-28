@@ -14,21 +14,14 @@ namespace TradeHubAnalyst.Libraries
 {
     public class AsyncUpdateItemDatabase
     {
-
-        private int maxAsync;
-        private int previouslyDoneItems;
-
-        private int startedItem;
-        private int finishedItem;
-
-        private int totalItems;
-        private DateTime startTime;
-        private CancellationToken token;
-        private IProgress<DownloadProgressReportModel> progress;
-
         private bool finishedWithErrors = false;
-
-
+        private CancellationToken token;
+        private int finishedItem;
+        private int maxAsync;
+        private int totalItems;
+        private IProgress<DownloadProgressReportModel> progress;
+        private long startTime;
+        private int startedItem;
 
         public async Task<bool> DoWork(IProgress<DownloadProgressReportModel> progressSent, CancellationToken cancellationToken)
         {
@@ -69,13 +62,12 @@ namespace TradeHubAnalyst.Libraries
 
             List<List<string>> allItemList = new List<List<string>>();
 
-            startTime = DateTime.Now;
+            startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
             using (var stream = File.Open(fileNameXls, FileMode.Open, FileAccess.Read))
             {
                 using (var reader = ExcelReaderFactory.CreateReader(stream))
                 {
-
                     var conf = new ExcelDataSetConfiguration
                     {
                         ConfigureDataTable = _ => new ExcelDataTableConfiguration
@@ -103,13 +95,6 @@ namespace TradeHubAnalyst.Libraries
 
                         allItemList.Add(singleRow);
 
-                        /* Trebalo pregaziti volumene zbog zareza
-                        ItemModel newItem = SqliteDataAccess.LoadSingleItem(dataTable.Rows[i][0].ToString());
-                        newItem.name = dataTable.Rows[i][2].ToString();
-                        newItem.volume = Decimal.Parse(itemVolumeInternational, CultureInfo.InvariantCulture);
-                        SqliteDataAccess.UpdateItems(newItem);
-                        */
-
                         token.ThrowIfCancellationRequested();
 
                         int progressPercentage = Convert.ToInt32(((double)i / totalItems) * 100);
@@ -117,7 +102,7 @@ namespace TradeHubAnalyst.Libraries
                         report = new DownloadProgressReportModel();
 
                         report.PercentageComplete = progressPercentage;
-                        report.MessageRemaining = "Processing" + StaticMethods.EstimatedTime(startTime, i, totalItems);
+                        report.MessageRemaining = "Step 2/4: Processing new item list" + StaticMethods.EstimatedTime(startTime, i, totalItems);
 
                         progress.Report(report);
                     }
@@ -126,28 +111,73 @@ namespace TradeHubAnalyst.Libraries
 
             File.Delete(fileNameXls);
 
-
             if (allItemList.Any())
             {
+                List<ItemModel> itemsDB = SqliteDataAccess.LoadItems();
+
+                List<ItemModel> todoItems = new List<ItemModel>();
 
                 ItemFiltersModel filters = SqliteDataAccess.LoadItemFilters();
 
-                long currentTImestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                long currentTImestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
 
-                startTime = DateTime.Now;
+                startedItem = 0;
+                totalItems = allItemList.Count;
+                startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
 
-                report = new DownloadProgressReportModel();
+                foreach (List<string> newItem in allItemList)
+                {
+                    token.ThrowIfCancellationRequested();
 
-                report.PercentageComplete = 0;
-                report.MessageRemaining = "Downloading data... ";
+                    bool isNewItem = true;
 
-                progress.Report(report);
+                    foreach (ItemModel item in itemsDB)
+                    {
+                        if (Int32.Parse(newItem[0]) == item.type_id)
+                        {
+                            isNewItem = false;
 
-                previouslyDoneItems = 0;
+                            long oldTimestamp = item.updated_at + (filters.updated_item_max_age * 24 * 60 * 60);
 
-                bool isFirstNew = true;
+                            if (currentTImestamp > oldTimestamp)
+                            {
+                                ItemModel newTodoItem = new ItemModel();
+                                newTodoItem.type_id = item.type_id;
+                                newTodoItem.name = newItem[1];
+                                newTodoItem.volume = Decimal.Parse(newItem[2], CultureInfo.InvariantCulture);
 
-                totalItems = allItemList.Count();
+                                todoItems.Add(newTodoItem);
+                            }
+                        }
+                    }
+
+                    if (isNewItem)
+                    {
+                        ItemModel newTodoItem = new ItemModel();
+                        newTodoItem.type_id = Int32.Parse(newItem[0]);
+                        newTodoItem.name = newItem[1];
+                        newTodoItem.volume = Decimal.Parse(newItem[2], CultureInfo.InvariantCulture);
+                        newTodoItem.sell_price = 0;
+                        newTodoItem.trade_volume = 0;
+                        newTodoItem.updated_at = 0;
+                        SqliteDataAccess.SaveItem(newTodoItem);
+
+                        todoItems.Add(newTodoItem);
+                    }
+
+                    report = new DownloadProgressReportModel();
+
+                    report.PercentageComplete = Convert.ToInt32(((double)startedItem / totalItems) * 100);
+                    report.MessageRemaining = "Step 3/4: Checking items in database" + StaticMethods.EstimatedTime(startTime, startedItem, totalItems);
+
+                    progress.Report(report);
+
+                    startedItem++;
+                }
+
+                startTime = DateTimeOffset.Now.ToUnixTimeSeconds();
+
+                totalItems = todoItems.Count();
 
                 startedItem = 0;
                 finishedItem = 0;
@@ -155,64 +185,22 @@ namespace TradeHubAnalyst.Libraries
 
                 while (startedItem < totalItems)
                 {
-
                     token.ThrowIfCancellationRequested();
 
-                    List<string> item = allItemList[startedItem];
-
-                    ItemModel existingItem = SqliteDataAccess.LoadSingleItem(item[0]);
-
-                    long oldTimestamp;
-
-                    if (existingItem == null)
+                    if (maxAsync < filters.max_async_tasks)
                     {
-                        ItemModel fullItem = new ItemModel();
-                        fullItem.type_id = Int32.Parse(item[0]);
-                        fullItem.name = item[1];
-                        fullItem.volume = Decimal.Parse(item[2], CultureInfo.InvariantCulture);
-                        fullItem.sell_price = 0;
-                        fullItem.trade_volume = 0;
-                        fullItem.updated_at = 0;
-                        SqliteDataAccess.SaveItem(fullItem);
-
-                        oldTimestamp = fullItem.updated_at + (filters.updated_item_max_age * 24 * 60 * 60);
-                    }
-                    else
-                    {
-                        oldTimestamp = existingItem.updated_at + (filters.updated_item_max_age * 24 * 60 * 60);
+                        maxAsync++;
+                        Task.Run(() => GetAndUpdateItem(todoItems[startedItem]));
                     }
 
-
-                    if (currentTImestamp > oldTimestamp)
-                    {
-                        if (isFirstNew)
-                        {
-                            previouslyDoneItems = startedItem;
-                            startTime = DateTime.Now;
-                            isFirstNew = false;
-                        }
-
-                        if (maxAsync < filters.max_async_tasks)
-                        {
-                            maxAsync++;
-                            Task.Run(() => GetAndUpdateItem(item));
-                        }
-
-                        Thread.Sleep(100);
-
-                    }
-                    else
-                    {
-                        startedItem++;
-                    }
-
+                    Thread.Sleep(100);
                 }
             }
 
             return finishedWithErrors;
         }
 
-        private void GetAndUpdateItem(List<string> item)
+        private void GetAndUpdateItem(ItemModel item)
         {
             startedItem++;
 
@@ -220,12 +208,11 @@ namespace TradeHubAnalyst.Libraries
             {
                 WebClient client = new WebClient();
 
-                string tradeVolumeSource = client.DownloadString("https://api.evemarketer.com/ec/marketstat?typeid=" + item[0]);
+                string tradeVolumeSource = client.DownloadString("https://api.evemarketer.com/ec/marketstat?typeid=" + item.type_id.ToString());
 
                 client.Dispose();
 
                 XDocument xmlDoc = XDocument.Parse(tradeVolumeSource);
-
 
                 XElement buy = xmlDoc.Root.Element("marketstat").Element("type").Element("buy").Element("volume");
                 long buyVolume = Int64.Parse(buy.Value);
@@ -236,15 +223,14 @@ namespace TradeHubAnalyst.Libraries
                 decimal sellPrice = Decimal.Parse(sell.Element("min").Value, CultureInfo.InvariantCulture);
 
                 ItemModel fullItem = new ItemModel();
-                fullItem.type_id = Int32.Parse(item[0]);
-                fullItem.name = item[1];
-                fullItem.volume = Decimal.Parse(item[2], CultureInfo.InvariantCulture);
+                fullItem.type_id = item.type_id;
+                fullItem.name = item.name;
+                fullItem.volume = item.volume;
                 fullItem.sell_price = sellPrice;
                 fullItem.trade_volume = buyVolume + sellVolume;
-                fullItem.updated_at = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+                fullItem.updated_at = DateTimeOffset.Now.ToUnixTimeSeconds();
 
                 SqliteDataAccess.UpdateItem(fullItem);
-
             }
             catch (Exception)
             {
@@ -255,18 +241,17 @@ namespace TradeHubAnalyst.Libraries
 
             if (!token.IsCancellationRequested)
             {
-                int progressPercentage = Convert.ToInt32(((double)(finishedItem + previouslyDoneItems) / totalItems) * 100);
+                int progressPercentage = Convert.ToInt32(((double)finishedItem / totalItems) * 100);
 
                 DownloadProgressReportModel report = new DownloadProgressReportModel();
 
                 report.PercentageComplete = progressPercentage;
-                report.MessageRemaining = "Downloading data" + StaticMethods.EstimatedTime(startTime, finishedItem, (totalItems - previouslyDoneItems));
+                report.MessageRemaining = "Step 4/4: Downloading new data" + StaticMethods.EstimatedTime(startTime, finishedItem, totalItems);
 
                 progress.Report(report);
             }
 
             maxAsync--;
         }
-
     }
 }

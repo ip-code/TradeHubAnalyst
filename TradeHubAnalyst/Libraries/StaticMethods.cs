@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -10,7 +11,7 @@ using TradeHubAnalyst.Models;
 
 namespace TradeHubAnalyst.Libraries
 {
-    class StaticMethods
+    internal class StaticMethods
     {
         public static ObservableCollection<CalculateTradeModel> LoadEmptyTrades(int amount)
         {
@@ -36,7 +37,7 @@ namespace TradeHubAnalyst.Libraries
             return displayTrades;
         }
 
-        static IEnumerable<string> EnumerateLines(TextReader reader)
+        private static IEnumerable<string> EnumerateLines(TextReader reader)
         {
             string line;
 
@@ -54,209 +55,103 @@ namespace TradeHubAnalyst.Libraries
             }
         }
 
-        public static string EstimatedTime(DateTime startTime, int itemsDone, int itemsTotal)
+        public static string EstimatedTime(long startTime, int itemsDone, int itemsTotal)
         {
-            var timeSpent = DateTime.Now - startTime;
+            long timeSpent = DateTimeOffset.Now.ToUnixTimeSeconds() - startTime;
 
             string formattedTime = ", estimated ";
 
-            int rawTime;
-            int minutesLeft = 0;
-            int minutes = 0;
-            int hours = 0;
-            int secondsLeft = 0;
+            double timeLeft;
+            double minutesLeft;
+            double minutes = 0;
+            double hours = 0;
+            double secondsLeft;
 
-            if (timeSpent.TotalSeconds < 5)
+            if (timeSpent < 5 || itemsDone == 0)
             {
                 return "...";
             }
 
-            double timeLeft = timeSpent.TotalSeconds / itemsDone * (itemsTotal - itemsDone);
-            rawTime = Convert.ToInt32(timeLeft);
+            timeLeft = (timeSpent / (double)itemsDone) * (double)(itemsTotal - itemsDone);
 
-            if (rawTime > (59 * 60))
+            if (timeLeft > (59 * 60))
             {
-                minutesLeft = rawTime % 3600;
+                minutesLeft = timeLeft % 3600;
+
                 secondsLeft = minutesLeft % 60;
                 minutes = (minutesLeft - secondsLeft) / 60;
-                hours = (rawTime - minutesLeft) / 3600;
+                hours = (timeLeft - minutesLeft) / 3600;
 
-                if (hours == 1)
+                if (hours <= 1)
                 {
-                    formattedTime = formattedTime + hours.ToString() + " hour and ";
+                    formattedTime = formattedTime + hours.ToString("N0") + " hour and ";
                 }
                 else
                 {
-                    formattedTime = formattedTime + hours.ToString() + " hours and ";
+                    formattedTime = formattedTime + hours.ToString("N0") + " hours and ";
                 }
 
-                if (minutes == 1)
+                if (minutes <= 1)
                 {
-                    formattedTime = formattedTime + minutes.ToString() + " minute";
+                    formattedTime = formattedTime + minutes.ToString("N0") + " minute";
                 }
                 else
                 {
-                    formattedTime = formattedTime + minutes.ToString() + " minutes";
+                    formattedTime = formattedTime + minutes.ToString("N0") + " minutes";
                 }
             }
-            else if (rawTime > 60 && rawTime <= (59 * 60))
+            else if (timeLeft > 60 && timeLeft <= (59 * 60))
             {
-                minutesLeft = rawTime;
+                minutesLeft = timeLeft;
                 secondsLeft = minutesLeft % 60;
                 minutes = (minutesLeft - secondsLeft) / 60;
 
-                if (minutes == 1)
+                if (minutes <= 1)
                 {
-                    formattedTime = formattedTime + minutes.ToString() + " minute";
+                    formattedTime = formattedTime + minutes.ToString("N0") + " minute";
                 }
                 else
                 {
-                    formattedTime = formattedTime + minutes.ToString() + " minutes";
+                    formattedTime = formattedTime + minutes.ToString("N0") + " minutes";
                 }
                 if (minutes < 5)
                 {
                     if (secondsLeft == 1)
                     {
-                        formattedTime = formattedTime + " and " + secondsLeft.ToString() + " second";
+                        formattedTime = formattedTime + " and " + secondsLeft.ToString("N0") + " second";
                     }
                     else
                     {
-                        formattedTime = formattedTime + " and " + secondsLeft.ToString() + " seconds";
+                        formattedTime = formattedTime + " and " + secondsLeft.ToString("N0") + " seconds";
                     }
                 }
             }
             else
             {
-                secondsLeft = rawTime;
+                secondsLeft = timeLeft;
 
                 if (secondsLeft == 1)
                 {
-                    formattedTime = formattedTime + secondsLeft.ToString() + " second";
+                    formattedTime = formattedTime + secondsLeft.ToString("N0") + " second";
                 }
                 else
                 {
-                    formattedTime = formattedTime + secondsLeft.ToString() + " seconds";
+                    formattedTime = formattedTime + secondsLeft.ToString("N0") + " seconds";
                 }
             }
 
             formattedTime += " remaining.";
 
-            if (hours < 1 && minutes < 1 && secondsLeft == 1)
+            if (hours < 1 && minutes < 1 && secondsLeft < 10)
             {
-                formattedTime = ", finishing download...";
+                formattedTime = ", finishing up...";
             }
 
             return formattedTime;
         }
 
-        public static bool checkVersion()
-        {
-            string url = "http://bretonis.mygamesonline.org/version";
-            var webClient = new WebClient();
-            string data = webClient.DownloadString(url);
-
-            if (!String.IsNullOrEmpty(data))
-            {
-                string[] arr1 = data.Split(new[] { "TradeHubAnalyst:" }, StringSplitOptions.None);
-                arr1 = arr1[1].Split(new[] { "</" }, StringSplitOptions.None);
-                arr1 = arr1[0].Split(new[] { "." }, StringSplitOptions.None);
-                int major1 = int.Parse(arr1[0]);
-                decimal minor1 = 0;
-
-
-                string[] arr2 = Properties.Resources.Version.Split(new[] { "." }, StringSplitOptions.None);
-                int major2 = int.Parse(arr2[0]);
-                decimal minor2 = 0;
-
-                if (major1 == major2)
-                {
-                    StringBuilder minorString = new StringBuilder();
-                    decimal i = 0;
-                    foreach (char c in arr1[1])
-                    {
-                        if (c >= '0' && c <= '9')
-                        {
-                            minorString.Append(c);
-                        }
-                        else
-                        {
-                            switch (c)
-                            {
-                                case 'a':
-                                    i = 0.1m;
-                                    break;
-                                case 'b':
-                                    i = 0.2m;
-                                    break;
-                                case 'c':
-                                    i = 0.3m;
-                                    break;
-                                case 'd':
-                                    i = 0.4m;
-                                    break;
-                                case 'e':
-                                    i = 0.5m;
-                                    break;
-                                case 'f':
-                                    i = 0.6m;
-                                    break;
-                            }
-                        }
-                    }
-
-                    minor1 = decimal.Parse(minorString.ToString());
-                    minor1 += i;
-
-                    minorString = new StringBuilder();
-                    i = 0;
-                    foreach (char c in arr2[1])
-                    {
-                        if (c >= '0' && c <= '9')
-                        {
-                            minorString.Append(c);
-                        }
-                        else
-                        {
-                            switch (c)
-                            {
-                                case 'a':
-                                    i = 0.1m;
-                                    break;
-                                case 'b':
-                                    i = 0.2m;
-                                    break;
-                                case 'c':
-                                    i = 0.3m;
-                                    break;
-                                case 'd':
-                                    i = 0.4m;
-                                    break;
-                                case 'e':
-                                    i = 0.5m;
-                                    break;
-                                case 'f':
-                                    i = 0.6m;
-                                    break;
-                            }
-                        }
-                    }
-                    minor2 = decimal.Parse(minorString.ToString());
-
-                    minor2 += i;
-                }
-
-                if (major1 > major2 || minor1 > minor2)
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         public static List<string[]> GetFilteredItems()
         {
-
             List<ItemModel> items = SqliteDataAccess.LoadItems();
 
             ItemFiltersModel filters = SqliteDataAccess.LoadItemFilters();
@@ -319,16 +214,13 @@ namespace TradeHubAnalyst.Libraries
                     isFilterPricePassed = true;
                 }
 
-
                 if (isIgnorePassed && isFilterVolumePassed && isFilterPricePassed && item.trade_volume > filters.min_trade_volume)
                 {
                     filteredItems.Add(new string[] { item.type_id.ToString(), item.name, item.volume.ToString(CultureInfo.InvariantCulture) });
                 }
             }
 
-
             return filteredItems;
-
         }
 
         public static ItemFiltersModel SaveDefaultItemFilterModel()
@@ -374,7 +266,6 @@ namespace TradeHubAnalyst.Libraries
             {
                 return 1;
             }
-
             else if (string.IsNullOrEmpty(y))
             {
                 return -1;
@@ -398,7 +289,6 @@ namespace TradeHubAnalyst.Libraries
             {
                 return 1;
             }
-
             else if (x > 0 && y == 0)
             {
                 return -1;
@@ -418,7 +308,6 @@ namespace TradeHubAnalyst.Libraries
 
                 if (sortDirection == 0)
                 {
-
                     return result;
                 }
                 else
@@ -434,7 +323,6 @@ namespace TradeHubAnalyst.Libraries
             {
                 return 1;
             }
-
             else if (x > 0 && y == 0)
             {
                 return -1;
@@ -452,5 +340,39 @@ namespace TradeHubAnalyst.Libraries
             }
         }
 
+        public static bool hasNewVersion()
+        {
+            string url = "https://raw.githubusercontent.com/ip-code/TradeHubAnalystWeb/master/api/version";
+            WebClient webClient = new WebClient();
+            string newVersion = webClient.DownloadString(url);
+            webClient.Dispose();
+
+            if (!newVersion.Equals(Properties.Resources.Version))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static string getNewVersion()
+        {
+            string url = "https://raw.githubusercontent.com/ip-code/TradeHubAnalystWeb/master/api/version";
+            WebClient webClient = new WebClient();
+            string newVersion = webClient.DownloadString(url);
+            webClient.Dispose();
+
+            return newVersion;
+        }
+
+        public static string getNewDownloadLink()
+        {
+            string url = "https://raw.githubusercontent.com/ip-code/TradeHubAnalystWeb/master/api/download";
+            WebClient webClient = new WebClient();
+            string newDownloadLink = webClient.DownloadString(url);
+            webClient.Dispose();
+
+            return newDownloadLink;
+        }
     }
 }

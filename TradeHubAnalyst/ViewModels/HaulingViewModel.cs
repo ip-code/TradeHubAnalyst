@@ -14,7 +14,9 @@ namespace TradeHubAnalyst.ViewModels
     {
         private ObservableCollection<CalculateTradeModel> trades;
         private int comboBoxSelectedId;
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         private string user_cargo_capacity;
         private string user_available_money;
         private bool popupUserCargoCapacity = false;
@@ -54,7 +56,6 @@ namespace TradeHubAnalyst.ViewModels
                     comboBoxSelectedId = newStation.id;
                 }
             }
-
         }
 
         public void SaveFiltersUponStart()
@@ -93,9 +94,9 @@ namespace TradeHubAnalyst.ViewModels
 
         public ObservableCollection<CalculateTradeModel> Trades
         {
-            get 
-            { 
-                return trades; 
+            get
+            {
+                return trades;
             }
 
             set

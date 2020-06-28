@@ -61,7 +61,7 @@ namespace TradeHubAnalyst.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.0a.
+        ///   Looks up a localized string similar to 2.0.1.
         /// </summary>
         internal static string Version {
             get {

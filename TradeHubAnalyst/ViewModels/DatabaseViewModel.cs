@@ -12,13 +12,15 @@ namespace TradeHubAnalyst.ViewModels
 {
     public partial class DatabaseViewModel : INotifyPropertyChanged
     {
-
         //private ObservableCollection<StationModel> stationCollection;
-        List<StationModel> stations;
+        private List<StationModel> stations;
+
         private string max_volume;
         private string max_price;
         private string min_trade_volume;
+
         public event PropertyChangedEventHandler PropertyChanged;
+
         private string newStationId = "";
         private string newStationname = "";
         private bool ignore_zero = false;
@@ -35,7 +37,6 @@ namespace TradeHubAnalyst.ViewModels
 
         public DatabaseViewModel()
         {
-
             LoadAllItemFilters();
         }
 
@@ -74,7 +75,6 @@ namespace TradeHubAnalyst.ViewModels
 
         private void LoadAllItemFilters()
         {
-
             ItemFiltersModel filters = SqliteDataAccess.LoadItemFilters();
             max_volume = filters.max_volume.ToString(CultureInfo.InvariantCulture);
             max_price = filters.max_price.ToString(CultureInfo.InvariantCulture);
@@ -121,7 +121,6 @@ namespace TradeHubAnalyst.ViewModels
 
                     OnPropertyChanged("PopupMaxAge");
                 }
-
             }
         }
 
@@ -132,7 +131,6 @@ namespace TradeHubAnalyst.ViewModels
                 return popupMaxAge;
             }
         }
-
 
         public List<StationModel> Stations
         {
@@ -165,7 +163,6 @@ namespace TradeHubAnalyst.ViewModels
 
                     OnPropertyChanged("PopupStationId");
                 }
-
             }
         }
 
@@ -191,7 +188,6 @@ namespace TradeHubAnalyst.ViewModels
                 OnPropertyChanged("NewStationName");
             }
         }
-
 
         public string MaxVolume
         {
@@ -283,6 +279,7 @@ namespace TradeHubAnalyst.ViewModels
                 }
             }
         }
+
         public bool PopupMinTradeVolume
         {
             get
@@ -315,6 +312,7 @@ namespace TradeHubAnalyst.ViewModels
                 }
             }
         }
+
         public bool PopupMaxAsyncTasks
         {
             get
@@ -406,7 +404,6 @@ namespace TradeHubAnalyst.ViewModels
             SqliteDataAccess.UpdateItemFilters(filters);
 
             OnPropertyChanged("FilteredItemCount");
-
         }
 
         private string CountFilteredItems(ItemFiltersModel filters)
@@ -457,7 +454,6 @@ namespace TradeHubAnalyst.ViewModels
                     isFilterPricePassed = true;
                 }
 
-
                 if (isIgnorePassed && isFilterVolumePassed && isFilterPricePassed && item.trade_volume > filters.min_trade_volume)
                 {
                     validItems++;
@@ -465,7 +461,6 @@ namespace TradeHubAnalyst.ViewModels
             }
 
             return validItems.ToString();
-
         }
 
         private void OnPropertyChanged(string propertyname)
@@ -531,9 +526,6 @@ namespace TradeHubAnalyst.ViewModels
             }
 
             OnPropertyChanged(popup);
-
         }
-
     }
-
 }
