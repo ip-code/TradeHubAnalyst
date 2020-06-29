@@ -815,7 +815,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TradeHubAnalyst"
         "ProductCode" = "8:{2F97D032-A7A1-4005-AF7A-37E63366FADC}"
-        "PackageCode" = "8:{F0B49305-39C0-4CD5-9019-F188173F580C}"
+        "PackageCode" = "8:{674C25F2-A66F-4479-9103-4D15D59F51A4}"
         "UpgradeCode" = "8:{170E8A89-D275-40DC-AF72-7D996BDADE2C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -13,4 +13,4 @@ Default application trade hubs:
 * Hek VIII – Moon 12 – Boundless Creation Factory
 * Rens VI – Moon 8 – Brutor Tribe Treasury
 
-For additional information go to http://bretonis.mygamesonline.org/tradehubanalyst
+For additional information go to https://tradehubanalyst.web.app/

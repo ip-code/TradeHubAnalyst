@@ -42,7 +42,7 @@
             &#x2022; Rens VI – Moon 8 – Brutor Tribe Treasury<LineBreak />
             <LineBreak />
             For additional information
-            <Hyperlink TextDecorations="None" NavigateUri="http://bretonis.mygamesonline.org/tradehubanalyst" RequestNavigate="Hyperlink_RequestNavigate">
+            <Hyperlink TextDecorations="None" NavigateUri="https://tradehubanalyst.web.app/" RequestNavigate="Hyperlink_RequestNavigate">
                     click here.
             </Hyperlink>
         </TextBlock>
